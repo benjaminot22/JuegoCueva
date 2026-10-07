@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyMov : MonoBehaviour
 {
     public Transform player;
+    [SerializeField] private int damage = 10;
     public float detectionRadius = 5.0f;
     public float speed = 2.0f;
 
@@ -55,7 +56,11 @@ public class EnemyMov : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("daño recibido");
+            PlayerStats playerHealth = collision.gameObject.GetComponent<PlayerStats>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
     }
     void OnDrawGizmosSelected()
