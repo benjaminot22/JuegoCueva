@@ -27382,14 +27382,14 @@ RectTransform:
   m_GameObject: {fileID: 1427752691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.5751, y: 3.7625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1113628724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.3, y: 104.7}
+  m_AnchoredPosition: {x: 21.3, y: 297}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427752693
@@ -27478,7 +27478,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -43.27221}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -27577,7 +27577,7 @@ RectTransform:
   m_GameObject: {fileID: 1538886369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.1251, y: 4.6763587, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 100069331}
@@ -27585,7 +27585,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.0057, y: -81.6}
+  m_AnchoredPosition: {x: 24.006, y: -306}
   m_SizeDelta: {x: 269.7082, y: 50.7556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1538886371
@@ -27632,8 +27632,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6955454810751023750}
-        m_TargetAssemblyTypeName: FinalScreenScript, Assembly-CSharp
+      - m_Target: {fileID: 7884304550370164622}
+        m_TargetAssemblyTypeName: PlayerMov, Assembly-CSharp
         m_MethodName: SalirDelJuego
         m_Mode: 1
         m_Arguments:
@@ -34179,7 +34179,7 @@ RectTransform:
   m_GameObject: {fileID: 1738751402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.4001, y: 4.9126, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1425245155}
@@ -34187,7 +34187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.0057, y: -10.377808}
+  m_AnchoredPosition: {x: 24.006, y: -20}
   m_SizeDelta: {x: 269.7082, y: 50.7556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738751404
@@ -34234,8 +34234,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6955454810751023750}
-        m_TargetAssemblyTypeName: FinalScreenScript, Assembly-CSharp
+      - m_Target: {fileID: 7884304550370164622}
+        m_TargetAssemblyTypeName: PlayerMov, Assembly-CSharp
         m_MethodName: ReiniciarDesdeNivel1
         m_Mode: 1
         m_Arguments:
@@ -35562,10 +35562,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -43301,27 +43301,13 @@ GameObject:
   - component: {fileID: 1021762538772520868}
   - component: {fileID: 1882501514431095160}
   - component: {fileID: 1623036657185910493}
-  - component: {fileID: 6955454810751023750}
   m_Layer: 0
   m_Name: Portal2
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6955454810751023750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6955454810751023749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0698b84713b82444793b1887a65b336f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PantallaFinal: {fileID: 1113628723}
 --- !u!70 &7262065406291320724
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -43368,7 +43354,7 @@ Transform:
   m_GameObject: {fileID: 6691938742842993434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.68, y: -2.89, z: 0}
+  m_LocalPosition: {x: 110.97, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43408,8 +43394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5094a889b51cc946af7215c353b8b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxSource: {fileID: 0}
-  sonidoSalto: {fileID: 0}
+  PantallaFinal: {fileID: 1113628723}
   Velocidad: 7
   FuerzaSalto: 13
   LongitudRaycast: 1.5
