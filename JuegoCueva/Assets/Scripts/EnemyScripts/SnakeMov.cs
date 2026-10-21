@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMov : MonoBehaviour
 {
@@ -61,7 +62,8 @@ public class EnemyMov : MonoBehaviour
             {
                 playerHealth.TakeDamage(damage);
             }
-        }
+     
+}
     }
     void OnDrawGizmosSelected()
     {

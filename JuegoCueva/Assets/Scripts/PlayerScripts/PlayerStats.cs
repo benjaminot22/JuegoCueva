@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
-{
-    public AudioSource sfxSource;
-    public AudioClip sonidoDamage;
+{ 
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int startGems = 0;
     private int currentHealth;
@@ -17,14 +16,14 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        sfxSource.PlayOneShot(sonidoDamage);
         currentHealth -= damage;
         Debug.Log("Jugador atacado! Vida restante: " + currentHealth);
 
         if (currentHealth <= 0)
         {
             Debug.Log("El jugador ha muerto!");
-            // gameObject.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
     }
 
