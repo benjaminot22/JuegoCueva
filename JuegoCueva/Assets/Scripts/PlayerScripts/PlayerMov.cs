@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMov : MonoBehaviour
 {
-    public GameObject PantallaFinal;
     public float Velocidad = 5f;
     public float FuerzaSalto = 10f;
     public float LongitudRaycast = 0.1f;
@@ -15,8 +14,6 @@ public class PlayerMov : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        PantallaFinal.SetActive(false);
-        Time.timeScale = 1;
     }
 
     void Update()
@@ -49,26 +46,6 @@ public class PlayerMov : MonoBehaviour
         animator.SetBool("Ensuelo", Ensuelo);
 
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Portal"))
-        {
-            PantallaFinal.SetActive(true);
-            Time.timeScale = 0;
-        }
-    }
-
-    public void ReiniciarDesdeNivel1()
-    {
-        SceneManager.LoadScene("Level1");
-    }
-
-    public void SalirDelJuego()
-    {
-        Application.Quit();
-    } 
-
 
     void OnDrawGizmos()
     {
