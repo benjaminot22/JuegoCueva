@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        SoundManager.Instance.PlayHitSound();
         currentHealth -= damage;
         Debug.Log("Jugador atacado! Vida restante: " + currentHealth);
 

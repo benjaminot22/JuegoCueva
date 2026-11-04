@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     [SerializeField] private AudioClip GemSound;
+    [SerializeField] private AudioClip HitSound;
     private AudioSource audioSource;
 
     private void Awake()
@@ -31,6 +32,14 @@ public class SoundManager : MonoBehaviour
         if (GemSound != null)
         {
             audioSource.PlayOneShot(GemSound);
+        }
+    }
+
+    public void PlayHitSound()
+    {
+        if (GemSound != null)
+        {
+            audioSource.PlayOneShot(HitSound);
         }
     }
 
