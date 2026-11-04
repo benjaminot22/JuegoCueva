@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private AudioClip GemSound;
     [SerializeField] private AudioClip HitSound;
+    [SerializeField] private AudioClip JumpSound;
     private AudioSource audioSource;
 
     private void Awake()
@@ -40,6 +41,14 @@ public class SoundManager : MonoBehaviour
         if (GemSound != null)
         {
             audioSource.PlayOneShot(HitSound);
+        }
+    }
+
+    public void PlayJumpSound()
+    {
+        if (GemSound != null)
+        {
+            audioSource.PlayOneShot(JumpSound);
         }
     }
 

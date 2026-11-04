@@ -40,6 +40,7 @@ public class PlayerMov : MonoBehaviour
 
         if (Ensuelo && Input.GetKeyDown(KeyCode.Space))
         {
+            SoundManager.Instance.PlayJumpSound();
             rb.AddForce(new Vector2(0f, FuerzaSalto), ForceMode2D.Impulse);
         }
 

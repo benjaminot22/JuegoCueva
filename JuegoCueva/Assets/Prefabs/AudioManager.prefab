@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GemSound: {fileID: 8300000, guid: 06bf8e6df2ca2a44785f5fd1e32961ec, type: 3}
   HitSound: {fileID: 8300000, guid: cde2bdaf17ae170468fbe6ea7fee6ccf, type: 3}
+  JumpSound: {fileID: 8300000, guid: 5e8e0309d53bb7f4392227d096f66552, type: 3}
