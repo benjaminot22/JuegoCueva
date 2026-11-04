@@ -306,8 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5094a889b51cc946af7215c353b8b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxSource: {fileID: 0}
-  sonidoSalto: {fileID: 0}
   Velocidad: 7
   FuerzaSalto: 13
   LongitudRaycast: 1.5
@@ -349,8 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29112c8ecc41866408052ec4f30b284d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxSource: {fileID: 0}
-  sonidoDamage: {fileID: 0}
   maxHealth: 100
   startGems: 0
   currentgems: 0
+  SoundManager: {fileID: 2949130939064662771, guid: cd133a3486f0c4a45836c7cd4b1b6c78, type: 3}
+  GemSound: {fileID: 8300000, guid: 06bf8e6df2ca2a44785f5fd1e32961ec, type: 3}

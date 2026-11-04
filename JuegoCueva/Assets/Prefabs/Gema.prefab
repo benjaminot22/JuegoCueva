@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gems: 5
+  SoundManager: {fileID: 2949130939064662771, guid: cd133a3486f0c4a45836c7cd4b1b6c78, type: 3}
+  GemSound: {fileID: 8300000, guid: 06bf8e6df2ca2a44785f5fd1e32961ec, type: 3}
 --- !u!95 &7152057293440482905
 Animator:
   serializedVersion: 7

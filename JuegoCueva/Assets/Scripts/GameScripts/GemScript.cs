@@ -13,6 +13,7 @@ public class GemScript : MonoBehaviour
             {
                 playerCoins.TakeGems(gems);
             }
+            
             Destroy(gameObject);
         }
     }

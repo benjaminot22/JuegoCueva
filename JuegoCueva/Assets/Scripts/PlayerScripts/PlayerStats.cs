@@ -7,7 +7,6 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int startGems = 0;
     private int currentHealth;
     public int currentgems;
-
     void Start()
     {
         currentHealth = maxHealth;
@@ -31,6 +30,7 @@ public class PlayerStats : MonoBehaviour
     {
         currentgems += gems;
         Debug.Log("Gemas conseguidas: " + currentgems);
+        SoundManager.Instance.PlayGemSound();
 
     }
 }
