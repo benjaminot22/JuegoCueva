@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Portal
   - Enemy
+  - Suelo
+  - Enemigo
+  - Gema
   layers:
   - Default
   - TransparentFX
