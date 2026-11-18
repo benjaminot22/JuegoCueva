@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Recolectar3 : MonoBehaviour
 {
+    public GameObject PanelFinal;
     [Header("Configuración de Recolección")]
     public int cantidadNecesaria = 8; // Cantidad de objetos para activar el premio
     private int objetosRecolectados = 0;
@@ -11,7 +12,10 @@ public class Recolectar3 : MonoBehaviour
     public Transform puntoDeAparicion;   // Lugar exacto donde aparecerá
 
     private bool yaAparecio = false; // Evita que aparezca múltiples veces
-
+    void Start()
+    {
+        PanelFinal.SetActive(false);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Verifica si tocamos un objeto con el Tag "Recolectable"
@@ -25,6 +29,14 @@ public class Recolectar3 : MonoBehaviour
             {
                 HacerAparecerObjeto();
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Final") == true)
+        {
+            PanelFinal.SetActive(true);
         }
     }
 

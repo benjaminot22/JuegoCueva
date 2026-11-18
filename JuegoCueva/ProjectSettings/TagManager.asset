@@ -9,6 +9,8 @@ TagManager:
   - Suelo
   - Enemigo
   - Gema
+  - FInal
+  - Final
   layers:
   - Default
   - TransparentFX
