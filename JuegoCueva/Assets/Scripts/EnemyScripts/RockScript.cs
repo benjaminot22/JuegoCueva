@@ -8,7 +8,7 @@ public class RockScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player") == true)
         {
-            collision.gameObject.GetComponent<PlayerStats>().TakeDamage(15);
+            GameManager.instance.PerderVida();
         }
     }
 

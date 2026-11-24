@@ -3,11 +3,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public UIManager uimanager;
     public int puntos = 0;
     public int vidas = 3;
 
     [Header("UI Game Over")]
     public GameObject panelGameOver;
+
+    public object GemasTotales { get; internal set; }
 
     void Star()
     {
@@ -77,4 +80,11 @@ public class GameManager : MonoBehaviour
         puntos = 0;
         Time.timeScale = 1f;
     }
+
+    public void PerderVida()
+    {
+        vidas -= 1;
+        uimanager.DesactivarVida(vidas);
+    }
+
 }

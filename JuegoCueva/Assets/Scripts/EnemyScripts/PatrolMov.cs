@@ -33,7 +33,7 @@ public class PatrolMov : MonoBehaviour
         }
         else
         {
-            collision.gameObject.GetComponent<PlayerStats>().TakeDamage(10);
+            GameManager.instance.PerderVida();
         }
 
 

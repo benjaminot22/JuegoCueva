@@ -3,15 +3,33 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-   public TextMeshProUGUI textoVidas;
-   public TextMeshProUGUI textoMonedas;
+    public GameObject[] Vidas;
+    public TextMeshProUGUI textoMonedas;
+    public int vidas = 3;
 
-   void Update()
-   {
-        if(GameManager.instance != null)
+    void Update()
+    {
+        if (GameManager.instance != null)
         {
-            textoVidas.text = "Vidas: " + GameManager.instance.vidas;
-            textoMonedas.text = "Gemas: " + GameManager.instance.puntos;
+            textoMonedas.text = "" + GameManager.instance.puntos;
         }
-   }
+    }
+
+    public void DesactivarVida(int indice)
+    {
+        Vidas[indice].SetActive(false);
+    }
+
+
+
+    public void ActivarVida(int indice)
+    {
+        Vidas[indice].SetActive(true);
+    }
+
+    public void PerderVida()
+    {
+        vidas -= 1;
+        DesactivarVida(vidas);
+    }
 }

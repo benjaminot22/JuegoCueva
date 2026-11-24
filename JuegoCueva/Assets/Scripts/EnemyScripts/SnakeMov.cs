@@ -57,13 +57,9 @@ public class EnemyMov : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerStats playerHealth = collision.gameObject.GetComponent<PlayerStats>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);
-            }
-     
-}
+            GameManager.instance.PerderVida();
+
+        }
     }
     void OnDrawGizmosSelected()
     {
