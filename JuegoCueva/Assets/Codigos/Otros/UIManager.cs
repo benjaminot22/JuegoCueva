@@ -20,29 +20,17 @@ public class UIManager : MonoBehaviour
     {
         if (GameManager.instance != null)
         {
-            textoMonedas.text = "" + GameManager.instance.puntos;
+            textoMonedas.text = "X" + GameManager.instance.puntos;
         }
        
 
     }
 
+
     public void DesactivarVida(int indice)
     {
         Vidas[indice].SetActive(false);
 
-    }
-
-
-
-    public void ActivarVida(int indice)
-    {
-        Vidas[indice].SetActive(true);
-    }
-
-    public void PerderVida()
-    {
-        vidas -= 1;
-        DesactivarVida(vidas);
     }
 
     

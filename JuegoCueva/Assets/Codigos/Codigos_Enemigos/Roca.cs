@@ -8,10 +8,7 @@ public class Roca : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) 
         {
-            if (GameManager.instance != null) 
-            { 
-                GameManager.instance.RestarVidas(damage); 
-            }
+            GameManager.instance.PerderVida();
         }
     }
 }

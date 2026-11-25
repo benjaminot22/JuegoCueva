@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +9,10 @@ public class GameManager : MonoBehaviour
     public int vidas = 3;
     public GameObject PanelGameOver;
 
+    [Header("Gemas")]
+    public int gemas = 0;
+    public TextMeshProUGUI textogemas;
+
     [Header("UI Game Over")]
     public GameObject panelGameOver;
 
@@ -15,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         if (uimanager == null)
         {
             instance = this;
@@ -29,9 +35,35 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void Star()
+    void start()
     {
-        BuscarPanel();
+        CargarMonedas();
+        ActualizarMonedasUI();
+
+    }
+
+    public void SumarGema(int cantidad)
+    {
+        gemas += cantidad;
+        ActualizarMonedasUI();
+        GuardarMonedas();
+    }
+
+    void ActualizarMonedasUI()
+    {
+        if (textogemas != null)
+            textogemas.text = "x" + gemas.ToString();
+    }
+
+    void GuardarMonedas()
+    {
+        PlayerPrefs.SetInt("Gemas", gemas);
+        PlayerPrefs.Save();
+    }
+
+    void CargarMonedas()
+    {
+        gemas = PlayerPrefs.GetInt("Gemas", 0);
     }
 
     public void BuscarPanel()
@@ -40,7 +72,7 @@ public class GameManager : MonoBehaviour
         {
             panelGameOver = GameObject.Find("Panel");
         }
-        
+
         if (panelGameOver != null)
         {
             panelGameOver.SetActive(false);
@@ -50,7 +82,7 @@ public class GameManager : MonoBehaviour
     public void RestarVidas(int cantidad)
     {
         Debug.Log("Vidas restantes: " + vidas);
-        
+
         vidas -= cantidad;
 
         if (vidas <= 0)
@@ -89,7 +121,7 @@ public class GameManager : MonoBehaviour
     {
         puntos += cantidad;
         Debug.Log("Puntos actuales: " + puntos);
-    
+
     }
 
     public void ReiniciarEstadisticas()
@@ -103,11 +135,13 @@ public class GameManager : MonoBehaviour
     {
         if (vidas <= 1)
         {
+            Time.timeScale = 0f;
             PanelGameOver.SetActive(true);
         }
         vidas -= 1;
         uimanager.DesactivarVida(vidas);
-        
+
     }
+
 
 }

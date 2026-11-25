@@ -51,13 +51,9 @@ public class Enemigos : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && puedeDanar)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (GameManager.instance != null)
-            {
-                GameManager.instance.RestarVidas(damage);
-                StartCoroutine(TiempoEsperaDano());
-            }
+            GameManager.instance.PerderVida();
         }
     }
 
