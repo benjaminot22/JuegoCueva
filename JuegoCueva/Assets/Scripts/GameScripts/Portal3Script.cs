@@ -18,5 +18,9 @@ public class Portal3Script : MonoBehaviour
         Application.Quit();
     }
 
+    public void ReiniciarNivel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
 

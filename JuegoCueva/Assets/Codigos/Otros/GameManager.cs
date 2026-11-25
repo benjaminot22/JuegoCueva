@@ -4,13 +4,30 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public UIManager uimanager;
-    public int puntos = 0;
+    public int puntos;
     public int vidas = 3;
+    public GameObject PanelGameOver;
 
     [Header("UI Game Over")]
     public GameObject panelGameOver;
 
     public object GemasTotales { get; internal set; }
+
+    private void Start()
+    {
+        if (uimanager == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+
+    }
 
     void Star()
     {
@@ -36,7 +53,7 @@ public class GameManager : MonoBehaviour
         
         vidas -= cantidad;
 
-        if (vidas <0)
+        if (vidas <= 0)
         {
             vidas = 0;
             Debug.Log("Game Over");
@@ -72,6 +89,7 @@ public class GameManager : MonoBehaviour
     {
         puntos += cantidad;
         Debug.Log("Puntos actuales: " + puntos);
+    
     }
 
     public void ReiniciarEstadisticas()
@@ -83,8 +101,13 @@ public class GameManager : MonoBehaviour
 
     public void PerderVida()
     {
+        if (vidas <= 1)
+        {
+            PanelGameOver.SetActive(true);
+        }
         vidas -= 1;
         uimanager.DesactivarVida(vidas);
+        
     }
 
 }
